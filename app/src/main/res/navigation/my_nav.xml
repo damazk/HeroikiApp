@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/allHeroesFragment">
+
+    <fragment
+        android:id="@+id/favHeroesFragment"
+        android:name="com.example.heroiki.FavHeroesFragment"
+        android:label="Favorie Heroes"
+        tools:layout="@layout/fragment_fav_heroes" >
+        <action
+            android:id="@+id/action_favHeroesFragment_to_allHeroesFragment"
+            app:destination="@id/allHeroesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/allHeroesFragment"
+        android:name="com.example.heroiki.AllHeroesFragment"
+        android:label="Heroiki"
+        tools:layout="@layout/fragment_all_heroes" >
+        <action
+            android:id="@+id/action_allHeroesFragment_to_favHeroesFragment"
+            app:destination="@id/favHeroesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_allHeroesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.heroiki.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_allHeroesFragment"
+            app:destination="@id/allHeroesFragment" />
+    </fragment>
+</navigation>
