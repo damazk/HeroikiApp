@@ -85,6 +85,9 @@ dependencies {
     // Retrofit https://square.github.io/retrofit/
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
+    // Moshi https://github.com/square/moshi
+    implementation "com.squareup.moshi:moshi:1.14.0"
+
 
 
 
