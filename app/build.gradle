@@ -87,9 +87,4 @@ dependencies {
 
     // Moshi https://github.com/square/moshi
     implementation "com.squareup.moshi:moshi:1.14.0"
-
-
-
-
-
 }
